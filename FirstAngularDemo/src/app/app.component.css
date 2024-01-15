@@ -1,0 +1,42 @@
+h1{
+    color:blueviolet;
+}
+h2{
+    color:brown;
+}
+.first{
+    background-color: blueviolet;
+    color: brown;
+}
+.second{
+    font-size: 22px;
+}
+.third{
+    font-style: italic;
+}
+.Success{
+    color: black;
+    font-size: medium;
+    width: 350px;
+    padding: 20px;
+    background-color: lightgreen;
+    font-style: italic;
+}
+.Error{
+    color: black;
+    font-size: medium;
+    width: 350px;
+    padding: 20px;
+    background-color:red;
+    font-style: italic;
+
+}
+.Warning{
+    color: black;
+    font-size: medium;
+    width: 350px;
+    padding: 20px;
+    background-color:yellow;
+    font-style: italic;
+
+}

@@ -1,0 +1,79 @@
+<h1> This is Angular application</h1>
+<h2> {{message}}</h2>
+
+<p>
+  City: <input type="text"[value]="city" [disabled]="isdisable" ><br>
+  <!-- City: <input type="text" value="{{city}}" disabled="{{isdisable}}"> -->
+  City: <input type="text" [value]="city" bind.disabled="isdisable"><br>
+
+  <input type="button" value="check" (click)="displayMsg()"><br><br>
+  <input type="button" value="Pay" (click)="showMsg()">
+</p>
+<app-employee-list [msg]="info" (passValue)="readMessage($event)"></app-employee-list>
+<h2>{{childMsg}}</h2>
+
+<app-student-list [data]="token" (exchangeValue)="getstudmsg($event)"></app-student-list>
+<h2>{{childStud}}</h2>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'"><app-employee> </app-employee></div>
+  <div *ngSwitchCase="'blue'" ><app-register></app-register></div>
+  <div *ngSwitchCase="'green'"><app-login></app-login></div>
+</div>
+
+@switch(num){
+  @case(1){
+    <div>have a good day!!</div>
+  }
+  @case(0){
+    <div>lets meet again!!</div>
+  }
+}
+ <app-employee> </app-employee>
+<app-register></app-register>
+<app-login></app-login>
+
+<div [ngStyle]="applycolor()">
+  <div>Ths is ng style block</div>
+</div>
+<div [ngClass]="'first second third'">
+  <div>This is ng class block</div>
+</div>
+
+<button class="btn btn-outline-success"
+(click)="Success()">
+Toggle Success
+</button>  
+<button class="btn btn-outline-danger"
+(click)="Error()">
+Toggle Error
+</button>  
+<button class="btn btn-outline-warning"
+(click)="Warning()">
+Toggle Warning
+</button>  
+<h3 class="display"
+[ngClass]="{ 'Success': isSuccess,  
+         'Error': isError ,  
+         'Warning':isWarning}">
+{{message}}
+</h3>
+
+<div appHighlight> Hello,This is informative block</div> 
+<p> Original text: {{text}}</p>
+<p>{{text|lowercase}}</p>
+<p>{{text|uppercase}}</p>
+<p>{{currentDate| date:'short'}}</p>
+<p>{{currentDate| date:'medium'}}</p>
+<p>{{currentDate| date:'long'}}</p>
+<p>{{currentDate| date:'dd/MM/YYYY'}}</p>
+<p>{{currentDate| date:'dd-MM-YYYY'}}</p>
+<p>{{currentDate| date:'dd-MMM-YYYY'}}</p>
+<p>{{currentDate| date:'dd-MMMM-YYYY'}}</p>
+<p>{{150|currency}}</p>
+<p>{{150|currency:'INR'}}</p>
+<p>{{150|currency:'EUR'}}</p>
+<p>{{num1| number:'3.0'|currency:'INR'}}</p>
+<p>{{num2| currency:'INR':'symbol':'4.2'}}</p>
+
+{{25| myMath}}
